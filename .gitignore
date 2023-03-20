@@ -1,0 +1,6 @@
+# Visual Studio
+.vs/
+
+# .Net 3.1
+obj/
+bin/
