@@ -14,3 +14,21 @@
 
 ## [Arrays](./Arrays/)
 
+- One Dimensional Arrays
+
+* Two Dimensional Arrays
+  - Jagged Arrays
+
+- Iterating over Arrays
+  - Displaying in Console
+  - Iterating using pointer address
+
+* Arrays in memory
+  - Arrays contain
+    - SyncBlockIndex (4 bytes)
+    - Ref. to method table (4 bytes)
+    - Length (4 bytes)
+  - String Arrays also contain
+    - TypeHandle (4 bytes)
+  - Integer Array Size: (4 + 4 + 4) = 12 bytes
+  - String Array Size: (12 + 4) = 16 bytes
