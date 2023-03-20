@@ -1,0 +1,32 @@
+﻿@model LoginViewModel
+
+<h1>Login View</h1>
+
+<form asp-controller="Auth" asp-action="Login" method="post">
+    <input type="hidden" asp-for="ReturnUrl" />
+    <div>
+        <label asp-for="Username">Username</label>
+        <input asp-for="Username" />
+    </div>
+    <div>
+        <label asp-for="Password">Password</label>
+        <input asp-for="Password" />
+    </div>
+    <div>
+        <input type="submit" value="Log In" />
+    </div>
+</form>
+
+<div>
+    <a asp-controller="Auth" asp-action="Register" asp-route-returnUrl="@Model.ReturnUrl">Register</a>
+</div>
+
+<div>
+    <h2>Sign In with</h2>
+    <form asp-controller="Auth" asp-action="ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+        @foreach (var provider in Model.ExternalProviders)
+        {
+            <button name="provider" value="@provider.Name" type="submit">@provider.Name</button>
+        }
+    </form>
+</div>

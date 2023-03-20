@@ -1,0 +1,47 @@
+﻿<h1>Home View</h1>
+<h4><a href="/Home/Authenticate">Authenticate</a></h4>
+<h4><a href="/Home/Authenticate?withRole=true">Authenticate with Role</a></h4>
+<h4><a href="/Home/Authenticate?withPolicy=true">Authenticate with Policy</a></h4>
+<h4><a href="/Home/Authenticate?securityLevel=6">Authenticate with Security Level 6</a></h4>
+<h4><a href="/Home/Authenticate?securityLevel=11">Authenticate with Security Level 11</a></h4>
+
+@using System.Security.Claims
+@using Basics.CustomPolicyProvider
+@using Microsoft.AspNetCore.Authorization
+@inject IAuthorizationService AuthorizationService
+
+<div>
+    <h2>Authentication Result</h2>
+    @if ((await AuthorizationService.AuthorizeAsync(User, "Claim.DoB")).Succeeded)
+    {
+        <p>User has DoB Claim.</p>
+        <p>Accessible Links</p>
+        <ol>
+            <li><a href="/Home/Secret">Secret</a></li>
+            <li><a href="/Home/SecretPolicy">Secret Policy</a></li>
+        </ol>
+    }
+    else if (User.HasClaim(x => x.Type == ClaimTypes.Role && x.Value == "CustomRole"))
+    {
+        <p>User has Role Claim with required value.</p>
+        <p>Accessible Links</p>
+        <ol>
+            <li><a href="/Home/Secret">Secret</a></li>
+            <li><a href="/Home/SecretRole">Secret Role</a></li>
+        </ol>
+    }
+    else if (User.Identity.IsAuthenticated)
+    {
+        <p>Required Claim or Role not found.</p>
+        <p>Accessible Links</p>
+        <ol>
+            <li><a href="/Home/Secret">Secret</a></li>
+            <li><a href="/Home/SecretLevel">Secret at Security Level 5 or above</a></li>
+            <li><a href="/Home/SecretHigherLevel">Secret at Security Level 10 or above</a></li>
+        </ol>
+    }
+    else
+    {
+        <p>Not Authenticated.</p>
+    }
+</div>
