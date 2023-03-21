@@ -89,6 +89,23 @@ namespace IdentityServer
                     AccessTokenLifetime = 1, // token expires after specified seconds
                     AllowAccessTokensViaBrowser = true,
                     RequireConsent = false
+                },
+                new Client
+                {
+                    ClientId = "client_id_win_wpf",
+                    //AllowedGrantTypes = GrantTypes.Implicit,   // for access_token and id_token
+                    AllowedGrantTypes = GrantTypes.Code,   // pkce
+                    RequirePkce = true,
+                    RequireClientSecret = false,  // pkce   // not required for native apps
+                    RedirectUris = { "http://localhost/sample-wpf-app" },
+                    AllowedCorsOrigins = { "http://localhost" },
+                    AllowedScopes = {
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile,
+                        "ApiOne",
+                    },
+                    AllowAccessTokensViaBrowser = true,
+                    RequireConsent = false
                 }
             };
     }

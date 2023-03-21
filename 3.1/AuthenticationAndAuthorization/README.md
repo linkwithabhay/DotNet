@@ -153,6 +153,8 @@
 
 * PKCE Setup : [[Ep.20]]()
 
+- WpfWinApp client setup for Login : [[Ep.21.1]]()
+
 ---
 
 ## [IdentityServer.ApiOne](./IdentityServer.ApiOne/)
@@ -206,3 +208,11 @@
 * SignOut Functionality : [[Ep.18]]()
 
 - PKCE Setup : [[Ep.20]]()
+
+---
+
+## [IdentityServer.WpfWinApp](./IdentityServer.WpfWinApp/)
+
+- Auth Token : `Cookie` and `JWT`
+
+* OIDC Setup for Login : [[Ep.21.1]]()

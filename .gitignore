@@ -4,3 +4,6 @@
 # .Net 3.1
 obj/
 bin/
+
+# .Net Framework
+packages/
