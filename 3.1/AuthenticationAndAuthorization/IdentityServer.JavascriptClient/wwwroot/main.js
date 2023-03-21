@@ -3,7 +3,8 @@
     client_id: "client_id_js",
     redirect_uri: "https://localhost:44357/Home/SignIn",
     post_logout_redirect_uri: "https://localhost:44357/Home/Index",
-    response_type: "id_token token",
+    //response_type: "id_token token",
+    response_type: "code",   // pkce
     scope: "openid random.claim.scope ApiOne",
     userStore: new Oidc.WebStorageStateStore({ store: window.localStorage })
 };

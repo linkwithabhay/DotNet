@@ -147,9 +147,11 @@
 
 - Auth Token : `JWT`
 
-- SignOut Functionality : [[Ep.18]]()
+* SignOut Functionality : [[Ep.18]]()
 
 - External OAuth Providers : [[Ep.19]]()
+
+* PKCE Setup : [[Ep.20]]()
 
 ---
 
@@ -180,6 +182,8 @@
 
 * SignOut Functionality : [[Ep.18]]()
 
+- PKCE Setup : [[Ep.20]]()
+
 ---
 
 ## [IdentityServer.JavascriptClient](./IdentityServer.JavascriptClient/)
@@ -200,3 +204,5 @@
   - Seeding Data
 
 * SignOut Functionality : [[Ep.18]]()
+
+- PKCE Setup : [[Ep.20]]()

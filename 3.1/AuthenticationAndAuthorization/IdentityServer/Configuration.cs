@@ -53,6 +53,7 @@ namespace IdentityServer
                     ClientId = "client_id_mvc",
                     ClientSecrets = { new Secret("client_secret_mvc".ToSha256()) },
                     AllowedGrantTypes = GrantTypes.Code,
+                    RequirePkce = true,
                     RedirectUris = { "https://localhost:44368/signin-oidc" },
                     PostLogoutRedirectUris = { "https://localhost:44368/Home/Index" },
                     AllowedScopes = {
@@ -73,7 +74,10 @@ namespace IdentityServer
                 new Client
                 {
                     ClientId = "client_id_js",
-                    AllowedGrantTypes = GrantTypes.Implicit,
+                    //AllowedGrantTypes = GrantTypes.Implicit,   // for access_token and id_token
+                    AllowedGrantTypes = GrantTypes.Code,   // pkce
+                    RequirePkce = true,
+                    RequireClientSecret = false,  // pkce
                     RedirectUris = { "https://localhost:44357/home/signin" },
                     PostLogoutRedirectUris = { "https://localhost:44357/Home/Index" },
                     AllowedCorsOrigins = { "https://localhost:44357" },

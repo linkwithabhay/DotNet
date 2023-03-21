@@ -64,23 +64,23 @@ namespace IdentityServer
 
             services.AddIdentityServer()
                 .AddAspNetIdentity<IdentityUser>()
-                .AddConfigurationStore(options =>
-                {
-                    options.ConfigureDbContext = b =>
-                        b.UseSqlServer(connectionString, sql =>
-                            sql.MigrationsAssembly(migrationAssembly));
-                })
-                .AddOperationalStore(options =>
-                {
-                    options.ConfigureDbContext = b =>
-                        b.UseSqlServer(connectionString, sql =>
-                            sql.MigrationsAssembly(migrationAssembly));
-                })
+                //.AddConfigurationStore(options =>
+                //{
+                //    options.ConfigureDbContext = b =>
+                //        b.UseSqlServer(connectionString, sql =>
+                //            sql.MigrationsAssembly(migrationAssembly));
+                //})
+                //.AddOperationalStore(options =>
+                //{
+                //    options.ConfigureDbContext = b =>
+                //        b.UseSqlServer(connectionString, sql =>
+                //            sql.MigrationsAssembly(migrationAssembly));
+                //})
                 //.AddSigningCredential(certificate);
-                //.AddInMemoryIdentityResources(Configuration.IdentityResources)
-                //.AddInMemoryApiResources(Configuration.ApiResources) // it does not work. WHY?
-                //.AddInMemoryApiScopes(Configuration.ApiScopes) // it works instead
-                //.AddInMemoryClients(Configuration.Clients)
+                .AddInMemoryIdentityResources(Configuration.IdentityResources)
+                 //.AddInMemoryApiResources(Configuration.ApiResources) // it does not work. WHY?
+                .AddInMemoryApiScopes(Configuration.ApiScopes) // it works instead
+                .AddInMemoryClients(Configuration.Clients)
                 .AddDeveloperSigningCredential();
 
             services.AddAuthentication()
@@ -106,7 +106,7 @@ namespace IdentityServer
             }
 
             // this will do the initial DB population
-            InitializeDatabase(app);
+            //InitializeDatabase(app);
 
             app.UseRouting();
 

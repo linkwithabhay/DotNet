@@ -16,19 +16,19 @@ namespace IdentityServer
     {
         public static void Main(string[] args)
         {
-            //var host = CreateHostBuilder(args).Build();
-            //using (var scope = host.Services.CreateScope())
-            //{
-            //    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
-            //    var user = new IdentityUser("bob");
-            //    userManager.CreateAsync(user, "password").GetAwaiter().GetResult();
-            //    userManager.AddClaimAsync(user, new Claim("random.claim", "claim.value")).GetAwaiter().GetResult();
-            //    userManager.AddClaimAsync(user, new Claim("another.random.claim", "another.claim.value"))
-            //        .GetAwaiter().GetResult();
-            //}
-            //host.Run();
+            var host = CreateHostBuilder(args).Build();
+            using (var scope = host.Services.CreateScope())
+            {
+                var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+                var user = new IdentityUser("bob");
+                userManager.CreateAsync(user, "password").GetAwaiter().GetResult();
+                userManager.AddClaimAsync(user, new Claim("random.claim", "claim.value")).GetAwaiter().GetResult();
+                userManager.AddClaimAsync(user, new Claim("another.random.claim", "another.claim.value"))
+                    .GetAwaiter().GetResult();
+            }
+            host.Run();
 
-            CreateHostBuilder(args).Build().Run();
+            // CreateHostBuilder(args).Build().Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
