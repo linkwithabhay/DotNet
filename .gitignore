@@ -1,6 +1,9 @@
 # Visual Studio
 .vs/
 
+# VS Code
+.vscode/
+
 # .Net 3.1
 obj/
 bin/

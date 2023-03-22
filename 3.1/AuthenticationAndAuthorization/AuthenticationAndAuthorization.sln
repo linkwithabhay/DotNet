@@ -31,6 +31,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer.JavascriptCl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.WpfWinApp", "IdentityServer.WpfWinApp\IdentityServer.WpfWinApp.csproj", "{C8880CB3-5EF6-4FB4-8F5E-55E23D48EDDB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.AngularClient", "IdentityServer.AngularClient\IdentityServer.AngularClient.csproj", "{F3EDAB6B-7285-42B8-BF26-2BF482CD35A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{C8880CB3-5EF6-4FB4-8F5E-55E23D48EDDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8880CB3-5EF6-4FB4-8F5E-55E23D48EDDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8880CB3-5EF6-4FB4-8F5E-55E23D48EDDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3EDAB6B-7285-42B8-BF26-2BF482CD35A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3EDAB6B-7285-42B8-BF26-2BF482CD35A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3EDAB6B-7285-42B8-BF26-2BF482CD35A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3EDAB6B-7285-42B8-BF26-2BF482CD35A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -97,6 +103,7 @@ Global
 		{E6249847-C1C6-4566-A85F-F6E0F4759D0B} = {334ED49C-5E83-4847-A13B-B3E26808DCCA}
 		{B8D433C2-6920-457B-A03E-B2856BA67931} = {334ED49C-5E83-4847-A13B-B3E26808DCCA}
 		{C8880CB3-5EF6-4FB4-8F5E-55E23D48EDDB} = {334ED49C-5E83-4847-A13B-B3E26808DCCA}
+		{F3EDAB6B-7285-42B8-BF26-2BF482CD35A2} = {334ED49C-5E83-4847-A13B-B3E26808DCCA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1936FCD6-AF38-4762-9DC5-545F3820F407}

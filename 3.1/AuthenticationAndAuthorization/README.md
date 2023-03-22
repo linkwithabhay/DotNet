@@ -155,6 +155,8 @@
 
 - WpfWinApp client setup for Login : [[Ep.21.1]]()
 
+* Angular client setup : [[Ep.21.4]]()
+
 ---
 
 ## [IdentityServer.ApiOne](./IdentityServer.ApiOne/)
@@ -216,3 +218,11 @@
 - Auth Token : `Cookie` and `JWT`
 
 * OIDC Setup for Login : [[Ep.21.1]]()
+
+---
+
+## [IdentityServer.AngularClient](./IdentityServer.AngularClient/angular-client/)
+
+- Auth Token : `Cookie` and `JWT`
+
+* OIDC Setup and API call : [[Ep.21.4]]()
